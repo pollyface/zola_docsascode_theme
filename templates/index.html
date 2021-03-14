@@ -1,4 +1,5 @@
 {% import "macro.html" as macro %}
+{% import "scripts.html" as scripts %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
       <title>{% block title %}{{ config.title }}{% endblock title %}</title>     
       <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
+      {{ macro::mathjax() }}
     </head>
 
     <body>
